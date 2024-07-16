@@ -20,7 +20,7 @@ jobs:
     steps:
     - name: Verify Base Image Integrity
       run:
-        gh attestation verify oci://ghcr.io/vanilla-os/core:main --owner Vanilla-OS
+        gh attestation verify oci://ghcr.io/Kanola-Images/base:main --owner Kanola-Images
       env:
         GH_TOKEN: ${{ github.token }}
 
