@@ -1,7 +1,0 @@
-name: utilities
-type: apt
-source:
-  packages:
-  - ghostscript
-  - zenity
-  - flatpak

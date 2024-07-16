@@ -1,12 +1,12 @@
-name: Kattleya Plasma Desktop
-id: kattleya-plasma
+name: Kanola Plasma Desktop
+id: kanola-plasma
 
 stages:
 - id: build
-  base: ghcr.io/vanilla-os/core:main
+  base: ghcr.io/Kanola-Images/base:main
   singlelayer: false
   labels:
-    maintainer: Kattleya Contributors
+    maintainer: Kanola Contributors
   args:
     DEBIAN_FRONTEND: noninteractive
   runs:
@@ -41,17 +41,6 @@ stages:
   - name: packages-modules
     type: includes
     includes:
-      - modules/00-vanilla-desktop-base.yml
-      - modules/00-vanilla-backgrounds.yml
-      - modules/00-vanilla-first-setup.yml
-      - modules/00-vanilla-system-operator.yml
-      - modules/00-vanilla-apx-gui.yml
-      - modules/00-vanilla-tour.yml
-      - modules/00-vanilla-sideload.yml
-      - modules/00-vanilla-updates-utility.yml
-      - modules/02-waydroid-modules.yml
-      - modules/03-fswarn.yml
-      - modules/10-vanilla-abroot-rollback-notifier.yml
       - modules/20-plasma-core.yml
       - modules/30-plasma-essentials.yml
       - modules/35-vanilla-apps.yml
@@ -59,26 +48,10 @@ stages:
       - modules/60-media.yml
       - modules/80-printers.yml
       - modules/90-3d-utils.yml
-      - modules/100-accessibility.yml
-      - modules/110-fonts.yml
-      - modules/130-plymouth.yml
-      - modules/131-plymouth-theme-vanilla.yml
-      - modules/140-password.yml
-      - modules/160-utilities.yml
       - modules/161-plasma-utilities.yml
-      - modules/170-gnome-software-vso-plugin.yml
       - modules/200-plasma-common.yml
-      - modules/210-libs-extra.yml
       - modules/996-kde-cleanup.yml
       - modules/997-clobber-kde-apps.yml
-      - modules/998-vanilla-cleanup.yml
-      - modules/999-pkg-cleanup.yml
-
-  - name: firstsetup-default-session
-    type: shell
-    commands:
-    - sed 's/Session=/Session=firstsetup/g' -i /usr/share/accountsservice/user-templates/administrator
-    - sed 's/Session=/Session=firstsetup/g' -i /usr/share/accountsservice/user-templates/standard
 
   - name: cleanup
     type: shell
