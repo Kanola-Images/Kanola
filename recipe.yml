@@ -17,13 +17,10 @@ stages:
   - name: init-setup
     type: shell
     commands:
-    - echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"' > /etc/environment
-    - sed -i '4,10d' /etc/profile
+    - lpkg --unlock
     - apt update
     - apt upgrade -y
     - apt clean
-    - apt-mark hold snapd
-    - apt -y install squashfs-tools minisign
 
   - name: vanilla-tools
     type: shell
