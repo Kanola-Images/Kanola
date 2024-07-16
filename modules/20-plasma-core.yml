@@ -4,9 +4,10 @@ source:
   packages:
   - sddm
   - libpam-systemd
-  - sddm-theme-debian-breeze
   - xorg
   - xserver-xephyr
+
+  - konsole
 
   - plasma-desktop
   - plasma-browser-integration
