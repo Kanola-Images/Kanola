@@ -1,0 +1,72 @@
+name: vso
+type: shell
+source:
+  type: tar
+  # switch to production build once in production
+  url: https://github.com/Vanilla-OS/vanilla-system-operator/releases/download/continuous/vso.tar.gz
+commands:
+- mkdir -p /usr/bin
+- cp /sources/vso/vso /usr/bin/vso
+- chmod +x /usr/bin/vso
+modules:
+- name: vso-manpage
+  type: shell
+  source:
+    type: tar
+    url: https://github.com/Vanilla-OS/vanilla-system-operator/releases/download/continuous/vso-man.tar.gz
+  commands:
+  - mv /sources/vso-manpage/man/vso.1 /usr/share/man/man1/
+- name: vso-os-shell
+  type: shell
+  commands:
+  - chmod +x /usr/bin/vso-os-shell
+  - echo "/usr/bin/vso-os-shell" >> /etc/shells
+  - sed -i 's/^\(SHELL=\).*/\1\/usr\/bin\/vso-os-shell/' /etc/default/useradd
+- name: vso-gnome-ext
+  type: shell
+  source:
+    type: tar
+    url: https://github.com/Vanilla-OS/vso-gnome-ext/archive/refs/tags/1.2.tar.gz
+  commands:
+  - mkdir -p /usr/share/gnome-shell/extensions/
+  - mv /sources/vso-gnome-ext/vso-gnome-ext-1.2/vso\@vanillaos.org /usr/share/gnome-shell/extensions/vso\@vanillaos.org
+- name: vso-deps-install
+  type: apt
+  source:
+    packages:
+    - dpkg-dev
+    - ifstat
+- name: vso-tasks-rotation-autostart
+  type: shell
+  commands: 
+  - mkdir /usr/lib/systemd/user/default.target.wants
+  - ln -s /usr/lib/systemd/user/vso-tasks-rotation.service /usr/lib/systemd/user/default.target.wants/vso-tasks-rotation.service
+- name: adwdialog
+  type: dpkg-buildpackage
+  source:
+    type: git
+    url: https://github.com/Vanilla-OS/AdwDialog.git
+    branch: main
+    commit: latest
+    paths:
+    - adwdialog
+  modules:
+  - name: adwdialog-deps-install
+    type: apt
+    source:
+      packages:
+      - build-essential
+      - debhelper
+      - desktop-file-utils
+      - dpkg-dev
+      - gettext
+      - libadwaita-1-dev
+      - libjpeg-dev
+      - make
+      - meson
+      - python3
+- name: enable-systemd-unit
+  type: shell
+  commands:
+  - ln -s /usr/lib/systemd/system/vanilla-updates.service /etc/systemd/system/multi-user.target.wants/vanilla-updates.service
+  - ln -s /usr/lib/systemd/system/vanilla-updates.timer /etc/systemd/system/timers.target.wants/vanilla-updates.timer

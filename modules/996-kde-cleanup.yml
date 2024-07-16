@@ -1,0 +1,10 @@
+name: vanilla-cleanup
+type: shell
+commands:
+- cp /usr/share/sddm/faces/* /etc/kattleya-theming/sddm/faces/
+- mv /usr/share/plasma/desktoptheme/default /usr/share/plasma/desktoptheme/breeze
+- mv /usr/share/plasma/desktoptheme/dracula /usr/share/plasma/desktoptheme/default
+- rm -r /usr/share/sddm/themes
+- ln -s /etc/kattleya-theming/sddm/themes /usr/share/sddm/themes
+# Fix kscreenlocker
+- chmod u+s /sbin/unix_chkpwd

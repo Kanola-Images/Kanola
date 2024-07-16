@@ -1,0 +1,12 @@
+name: accessibility
+type: apt
+source:
+  packages:
+  - at-spi2-core
+  - brltty
+  - espeak-ng
+  - mousetweaks
+  - orca
+  
+  - speech-dispatcher
+  - speech-dispatcher-espeak-ng

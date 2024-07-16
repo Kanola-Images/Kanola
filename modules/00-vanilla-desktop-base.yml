@@ -1,0 +1,19 @@
+name: desktop-base
+type: dpkg-buildpackage
+source:
+  type: git
+  url: https://github.com/Vanilla-OS/desktop-base.git
+  branch: main
+  commit: latest
+  paths:
+  - desktop-base
+modules:
+- name: desktop-base-deps-install
+  type: apt
+  source:
+    packages:
+    - build-essential
+    - dpkg-dev
+    - dh-make
+    - librsvg2-bin
+    - optipng

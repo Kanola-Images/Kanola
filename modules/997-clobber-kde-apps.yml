@@ -1,0 +1,5 @@
+name: clobber-kde
+type: shell
+commands:
+- rm /usr/share/applications/org.kde.konsole.desktop
+- sudo apt purge --autoremove -y plasma-discover

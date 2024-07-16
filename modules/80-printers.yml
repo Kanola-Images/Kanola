@@ -1,0 +1,9 @@
+name: printers
+type: apt
+source:
+  packages:
+  - cups
+  - cups-pk-helper
+
+  - system-config-printer-common
+  - system-config-printer-udev
