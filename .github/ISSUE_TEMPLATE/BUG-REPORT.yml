@@ -35,11 +35,10 @@ body:
   - type: dropdown
     id: os-version
     attributes:
-      label: On what version of Vanilla OS this happens?
+      label: On what version of Kanola does this happen?
       description: |
         You can look it up in the Settings app, at the bottom of the About page.
       options:
-        - "22.10"
         - "Unreleased"
     validations:
       required: true
