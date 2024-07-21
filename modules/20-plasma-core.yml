@@ -7,8 +7,6 @@ source:
   - xorg
   - xserver-xephyr
 
-  - konsole
-
   - plasma-desktop
   - plasma-browser-integration
   - plasma-firewall
