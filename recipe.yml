@@ -40,11 +40,6 @@ stages:
     includes:
       - modules/20-plasma-core.yml
       - modules/30-plasma-essentials.yml
-      - modules/35-vanilla-apps.yml
-      - modules/50-laptop-goodies.yml
-      - modules/60-media.yml
-      - modules/80-printers.yml
-      - modules/90-3d-utils.yml
       - modules/161-plasma-utilities.yml
       - modules/200-plasma-common.yml
       - modules/996-kde-cleanup.yml
