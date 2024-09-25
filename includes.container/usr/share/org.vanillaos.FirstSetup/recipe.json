@@ -87,8 +87,8 @@
           "default": true,
           "applications": [
             {
-              "name": "Calculator",
-              "icon": "org.gnome.Calculator",
+              "name": "KCalc",
+              "icon": "org.kde.kcalc",
               "flatpak": true
             },
             {
@@ -97,18 +97,18 @@
               "flatpak": true
             },
             {
-              "name": "Characters",
-              "icon": "org.gnome.Characters",
+              "name": "KCharSelect",
+              "icon": "org.kde.kcharselect",
               "flatpak": true
             },
             {
-              "name": "Clocks",
-              "icon": "org.gnome.clocks",
+              "name": "KClock",
+              "icon": "org.kde.kclock",
               "flatpak": true
             },
             {
-              "name": "Connections",
-              "icon": "org.gnome.Connections",
+              "name": "KRDC",
+              "icon": "org.kde.krdc",
               "flatpak": true
             },
             {
@@ -117,33 +117,28 @@
               "flatpak": true
             },
             {
-              "name": "Disk Usage Analyzer",
-              "icon": "org.gnome.baobab",
+              "name": "FileLight",
+              "icon": "org.kde.filelight",
               "flatpak": true
             },
             {
-              "name": "Document Scanner",
-              "icon": "org.gnome.SimpleScan",
+              "name": "SkanPage",
+              "icon": "org.kde.skanpage",
               "flatpak": true
             },
             {
-              "name": "Document Viewer",
-              "icon": "org.gnome.Evince",
+              "name": "Okular",
+              "icon": "org.kde.okular",
               "flatpak": true
             },
             {
-              "name": "File Roller",
-              "icon": "org.gnome.FileRoller",
+              "name": "Ark",
+              "icon": "org.kde.ark",
               "flatpak": true
             },
             {
-              "name": "Fonts",
-              "icon": "org.gnome.font-viewer",
-              "flatpak": true
-            },
-            {
-              "name": "Image Viewer",
-              "icon": "org.gnome.Loupe",
+              "name": "GwenView",
+              "icon": "org.kde.gwenview",
               "flatpak": true
             },
             {
@@ -152,18 +147,18 @@
               "flatpak": true
             },
             {
-              "name": "Maps",
-              "icon": "org.gnome.Maps",
+              "name": "Marble",
+              "icon": "org.kde.marble",
               "flatpak": true
             },
             {
-              "name": "Music",
-              "icon": "org.gnome.Music",
+              "name": "Elisa",
+              "icon": "org.kde.elisa",
               "flatpak": true
             },
             {
               "name": "Photos",
-              "icon": "org.gnome.Photos",
+              "icon": "org.kde.koko",
               "flatpak": true
             },
             {
@@ -172,8 +167,8 @@
               "flatpak": true
             },
             {
-              "name": "Text Editor",
-              "icon": "org.gnome.TextEditor",
+              "name": "Kate",
+              "icon": "org.kde.kate",
               "flatpak": true
             },
             {
@@ -182,8 +177,8 @@
               "flatpak": true
             },
             {
-              "name": "Weather",
-              "icon": "org.gnome.Weather",
+              "name": "KWeather",
+              "icon": "org.kde.kweather",
               "flatpak": true
             }
           ]
@@ -210,11 +205,6 @@
             {
               "name": "Bottles",
               "icon": "com.usebottles.bottles",
-              "flatpak": true
-            },
-            {
-              "name": "Extension Manager",
-              "icon": "com.mattjakeman.ExtensionManager",
               "flatpak": true
             },
             {
@@ -316,11 +306,9 @@
       ],
       "final": [
         {
-          "if": "Calculator",
+          "if": "KCalc",
           "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.Calculator"
-          ]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kcalc"]
         },
         {
           "if": "Calendar",
@@ -330,23 +318,21 @@
           ]
         },
         {
-          "if": "Characters",
+          "if": "KCharSelect",
           "type": "command",
           "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.Characters"
+            "!nextBoot !noRoot flatpak install -y org.kde.kcharselect"
           ]
         },
         {
-          "if": "Clocks",
+          "if": "KClock",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.clocks"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kclock"]
         },
         {
-          "if": "Connections",
+          "if": "KRDC",
           "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.Connections"
-          ]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.krdc"]
         },
         {
           "if": "Contacts",
@@ -356,47 +342,29 @@
           ]
         },
         {
-          "if": "Disk Usage Analyzer",
+          "if": "FileLight",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.baobab"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.filelight"]
         },
         {
-          "if": "Document Scanner",
+          "if": "SkanPage",
           "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.SimpleScan"
-          ]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.skanpage"]
         },
         {
-          "if": "Document Viewer",
+          "if": "Okular",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Evince"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.okular"]
         },
         {
-          "if": "Extension Manager",
+          "if": "Ark",
           "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y com.mattjakeman.ExtensionManager"
-          ]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.ark"]
         },
         {
-          "if": "File Roller",
+          "if": "GwenView",
           "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.FileRoller"
-          ]
-        },
-        {
-          "if": "Fonts",
-          "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.font-viewer"
-          ]
-        },
-        {
-          "if": "Image Viewer",
-          "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Loupe"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.gwenview"]
         },
         {
           "if": "Logs",
@@ -404,19 +372,19 @@
           "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Logs"]
         },
         {
-          "if": "Maps",
+          "if": "Marble",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Maps"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.marble"]
         },
         {
-          "if": "Music",
+          "if": "Elisa",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Music"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.elisa"]
         },
         {
           "if": "Photos",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Photos"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.koko"]
         },
         {
           "if": "Snapshot",
@@ -426,16 +394,14 @@
           ]
         },
         {
-          "if": "Text Editor",
+          "if": "Kate",
           "type": "command",
-          "commands": [
-            "!nextBoot !noRoot flatpak install -y org.gnome.TextEditor"
-          ]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kate"]
         },
         {
-          "if": "Weather",
+          "if": "KWeather",
           "type": "command",
-          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Weather"]
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kweather"]
         },
         {
           "if": "Videos",
