@@ -1,0 +1,523 @@
+{
+  "log_file": "/etc/vanilla/first-setup.log",
+  "distro_name": "Vanilla OS",
+  "distro_logo": "org.vanillaos.FirstSetup-flower",
+  "pre_run": [
+    "!nextBoot su - $REAL_USER -c \"flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo\""
+  ],
+  "post_run": [
+    "sh -c /usr/bin/__first_setup_reset_session",
+    "!nextBoot sh -c /usr/bin/__first_setup_cleanup",
+    "!nextBoot !noRoot vso pico-init",
+    "rm -f /etc/vanilla-first-setup-done"
+  ],
+  "tour_app": "vanilla-tour",
+  "tour": {
+    "get-involved": {
+      "icon": "system-users-symbolic",
+      "title": "Get Involved",
+      "description": "Vanilla OS is a community project. You can contribute to the project by reporting bugs, suggesting new features, or even by writing code.",
+      "read_more_link": "https://vanillaos.org/get-involved"
+    },
+    "community": {
+      "icon": "help-faq-symbolic",
+      "title": "Join The Community",
+      "description": "Our community is active on Discord. You can join us to ask questions, get help, or just to chat with other users.",
+      "read_more_link": "https://discord.gg/3cD2Q7Ht3S"
+    },
+    "abroot": {
+      "icon": "security-medium-symbolic",
+      "title": "Immutable and Atomic",
+      "description": "Vanilla OS is an immutable and atomic Linux distribution. It is based on Debian and uses ABRoot to provide atomic transactions.",
+      "read_more_link": "https://documentation.vanillaos.org/docs/ABRoot/"
+    },
+    "apx": {
+      "icon": "vanilla-container-terminal-symbolic",
+      "title": "Sub-System Ready To Go",
+      "description": "Vanilla OS comes with Apx, a new package manager which installs software in integrated containers to prevent host compromise.",
+      "read_more_link": "https://documentation.vanillaos.org/docs/apx/"
+    }
+  },
+  "steps": {
+    "network": {
+      "template": "network",
+      "protected": true
+    },
+    "conn-check": {
+      "template": "conn-check",
+      "protected": true
+    },
+    "welcome": {
+      "template": "welcome",
+      "protected": true
+    },
+    "language": {
+      "template": "language",
+      "new-user-only": true
+    },
+    "keyboard": {
+      "template": "keyboard",
+      "new-user-only": true
+    },
+    "timezone": {
+      "template": "timezone",
+      "new-user-only": true
+    },
+    "theme": {
+      "template": "theme"
+    },
+    "user": {
+      "template": "user",
+      "new-user-only": true
+    },
+    "hostname": {
+      "template": "hostname",
+      "new-user-only": true
+    },
+    "apps": {
+      "template": "applications",
+      "icon": "org.gnome.Software-symbolic",
+      "title": "Applications",
+      "description": "Choose which applications to install.",
+      "bundles": [
+        {
+          "id": "core-apps",
+          "title": "Core Applications",
+          "subtitle": "Essential GNOME apps like Calendar or Document Viewer.",
+          "default": true,
+          "applications": [
+            {
+              "name": "KCalc",
+              "icon": "org.kde.kcalc",
+              "flatpak": true
+            },
+            {
+              "name": "Calendar",
+              "icon": "org.gnome.Calendar",
+              "flatpak": true
+            },
+            {
+              "name": "KCharSelect",
+              "icon": "org.kde.kcharselect",
+              "flatpak": true
+            },
+            {
+              "name": "KClock",
+              "icon": "org.kde.kclock",
+              "flatpak": true
+            },
+            {
+              "name": "KRDC",
+              "icon": "org.kde.krdc",
+              "flatpak": true
+            },
+            {
+              "name": "Contacts",
+              "icon": "org.gnome.Contacts",
+              "flatpak": true
+            },
+            {
+              "name": "FileLight",
+              "icon": "org.kde.filelight",
+              "flatpak": true
+            },
+            {
+              "name": "SkanPage",
+              "icon": "org.kde.skanpage",
+              "flatpak": true
+            },
+            {
+              "name": "Okular",
+              "icon": "org.kde.okular",
+              "flatpak": true
+            },
+            {
+              "name": "Ark",
+              "icon": "org.kde.ark",
+              "flatpak": true
+            },
+            {
+              "name": "GwenView",
+              "icon": "org.kde.gwenview",
+              "flatpak": true
+            },
+            {
+              "name": "Logs",
+              "icon": "org.gnome.Logs",
+              "flatpak": true
+            },
+            {
+              "name": "Marble",
+              "icon": "org.kde.marble",
+              "flatpak": true
+            },
+            {
+              "name": "Elisa",
+              "icon": "org.kde.elisa",
+              "flatpak": true
+            },
+            {
+              "name": "Photos",
+              "icon": "org.kde.koko",
+              "flatpak": true
+            },
+            {
+              "name": "Snapshot",
+              "icon": "org.gnome.Snapshot",
+              "flatpak": true
+            },
+            {
+              "name": "Kate",
+              "icon": "org.kde.kate",
+              "flatpak": true
+            },
+            {
+              "name": "Videos",
+              "icon": "org.gnome.Totem",
+              "flatpak": true
+            },
+            {
+              "name": "KWeather",
+              "icon": "org.kde.kweather",
+              "flatpak": true
+            }
+          ]
+        },
+        {
+          "id": "office",
+          "title": "Office",
+          "subtitle": "The LibreOffice suite.",
+          "default": false,
+          "applications": [
+            {
+              "name": "LibreOffice",
+              "icon": "org.libreoffice.LibreOffice",
+              "flatpak": true
+            }
+          ]
+        },
+        {
+          "id": "utilities",
+          "title": "Common Utilities",
+          "subtitle": "Useful utilities like Bottles or Sound Recorder.",
+          "default": false,
+          "applications": [
+            {
+              "name": "Bottles",
+              "icon": "com.usebottles.bottles",
+              "flatpak": true
+            },
+            {
+              "name": "Heroic Games Launcher",
+              "icon": "com.heroicgameslauncher.hgl",
+              "flatpak": true
+            },
+            {
+              "name": "Lutris",
+              "icon": "net.lutris.Lutris",
+              "flatpak": true
+            },
+            {
+              "name": "Boxes",
+              "icon": "org.gnome.Boxes",
+              "flatpak": true
+            },
+            {
+              "name": "Déjà Dup Backups",
+              "icon": "org.gnome.DejaDup",
+              "flatpak": true
+            },
+            {
+              "name": "Flatseal",
+              "icon": "com.github.tchx84.Flatseal",
+              "flatpak": true
+            },
+            {
+              "name": "Metadata Cleaner",
+              "icon": "fr.romainvigier.MetadataCleaner",
+              "flatpak": true
+            },
+            {
+              "name": "Rnote",
+              "icon": "com.github.flxzt.rnote",
+              "flatpak": true
+            },
+            {
+              "name": "Shortwave",
+              "icon": "de.haeckerfelix.Shortwave",
+              "flatpak": true
+            },
+            {
+              "name": "Sound Recorder",
+              "icon": "org.gnome.SoundRecorder",
+              "flatpak": true
+            }
+          ]
+        },
+        {
+          "id": "browsers",
+          "title": "Browsers",
+          "subtitle": "Applications that you can use to browse the internet. Traditionally, you only need one.",
+          "default": true,
+          "applications": [
+            {
+              "name": "Firefox",
+              "icon": "org.mozilla.firefox",
+              "flatpak": true
+            },
+            {
+              "name": "Google Chrome",
+              "icon": "com.google.Chrome",
+              "flatpak": true,
+              "active": false
+            },
+            {
+              "name": "Chromium",
+              "icon": "org.chromium.Chromium",
+              "flatpak": true,
+              "active": false
+            },
+            {
+              "name": "Brave Browser",
+              "icon": "com.brave.Browser",
+              "flatpak": true,
+              "active": false
+            },
+            {
+              "name": "Microsoft Edge",
+              "icon": "com.microsoft.Edge",
+              "flatpak": true,
+              "active": false
+            },
+            {
+              "name": "Vivaldi",
+              "icon": "com.vivaldi.Vivaldi",
+              "flatpak": true,
+              "active": false
+            },
+            {
+              "name": "GNOME Web",
+              "icon": "org.gnome.Epiphany",
+              "flatpak": true,
+              "active": false
+            }
+          ]
+        }
+      ],
+      "final": [
+        {
+          "if": "KCalc",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kcalc"]
+        },
+        {
+          "if": "Calendar",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.gnome.Calendar"
+          ]
+        },
+        {
+          "if": "KCharSelect",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.kde.kcharselect"
+          ]
+        },
+        {
+          "if": "KClock",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kclock"]
+        },
+        {
+          "if": "KRDC",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.krdc"]
+        },
+        {
+          "if": "Contacts",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.gnome.Contacts"
+          ]
+        },
+        {
+          "if": "FileLight",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.filelight"]
+        },
+        {
+          "if": "SkanPage",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.skanpage"]
+        },
+        {
+          "if": "Okular",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.okular"]
+        },
+        {
+          "if": "Ark",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.ark"]
+        },
+        {
+          "if": "GwenView",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.gwenview"]
+        },
+        {
+          "if": "Logs",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Logs"]
+        },
+        {
+          "if": "Marble",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.marble"]
+        },
+        {
+          "if": "Elisa",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.elisa"]
+        },
+        {
+          "if": "Photos",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.koko"]
+        },
+        {
+          "if": "Snapshot",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.gnome.Snapshot"
+          ]
+        },
+        {
+          "if": "Kate",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kate"]
+        },
+        {
+          "if": "KWeather",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.kde.kweather"]
+        },
+        {
+          "if": "Videos",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Totem"]
+        },
+        {
+          "if": "GNOME Web",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.gnome.Epiphany"
+          ]
+        },
+        {
+          "if": "LibreOffice",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.libreoffice.LibreOffice"
+          ]
+        },
+        {
+          "if": "Bottles",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y com.usebottles.bottles"
+          ]
+        },
+        {
+          "if": "Heroic Games Launcher",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y com.heroicgameslauncher.hgl"
+          ]
+        },
+        {
+          "if": "Lutris",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y net.lutris.Lutris"]
+        },
+        {
+          "if": "Boxes",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.Boxes"]
+        },
+        {
+          "if": "Déjà Dup Backups",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y org.gnome.DejaDup"]
+        },
+        {
+          "if": "Flatseal",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y com.github.tchx84.Flatseal"
+          ]
+        },
+        {
+          "if": "Metadata Cleaner",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y fr.romainvigier.MetadataCleaner"
+          ]
+        },
+        {
+          "if": "Rnote",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y com.github.flxzt.rnote"
+          ]
+        },
+        {
+          "if": "Shortwave",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y de.haeckerfelix.Shortwave"
+          ]
+        },
+        {
+          "if": "Sound Recorder",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.gnome.SoundRecorder"
+          ]
+        },
+        {
+          "if": "Firefox",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.mozilla.firefox"
+          ]
+        },
+        {
+          "if": "Google Chrome",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y com.google.Chrome"]
+        },
+        {
+          "if": "Chromium",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y org.chromium.Chromium"
+          ]
+        },
+        {
+          "if": "Brave Browser",
+          "type": "command",
+          "commands": ["!nextBoot !noRoot flatpak install -y com.brave.Browser"]
+        },
+        {
+          "if": "Microsoft Edge",
+          "type": "command",
+          "commands": [
+            "!nextBoot !noRoot flatpak install -y com.microsoft.Edge"
+          ]
+        }
+      ]
+    }
+  }
+}
