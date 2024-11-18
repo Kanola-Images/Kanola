@@ -1,0 +1,5 @@
+name: no-sddm
+type: shell
+source:
+  packages:
+  - apt-mark hold sddm

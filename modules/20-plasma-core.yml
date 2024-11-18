@@ -2,6 +2,7 @@ name: plasma-core
 type: apt
 source:
   packages:
+  - gdm3
   - libpam-systemd
   - xorg
   - xserver-xephyr
