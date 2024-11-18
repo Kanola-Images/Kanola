@@ -9,7 +9,6 @@ source:
   - ibus-data
   - kde-config-gtk-style
   - kde-config-screenlocker
-  - kde-config-sddm
   - kde-style-oxygen-qt5
   - kgamma5
   - khelpcenter
