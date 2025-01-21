@@ -3,7 +3,7 @@ id: kanola-plasma
 
 stages:
 - id: build
-  base: ghcr.io/kanola-images/base:dev
+  base: ghcr.io/kanola-images/base:main
   singlelayer: false
   labels:
     maintainer: Kanola Contributors
