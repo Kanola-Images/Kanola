@@ -15,7 +15,6 @@ source:
   - plasma-thunderbolt
   - plasma-vault
   - plasma-workspace
-  - plasma-workspace-wayland
 
   - dbus-x11
 
