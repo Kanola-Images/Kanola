@@ -12,7 +12,6 @@ source:
   - kde-style-oxygen-qt5
   - kgamma5
   - khelpcenter
-  - khotkeys
   - kinfocenter
   - kio-extras
   - kmenuedit
