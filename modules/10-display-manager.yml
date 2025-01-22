@@ -1,0 +1,5 @@
+name: no-sddm
+type: shell
+commands:
+- apt-mark hold sddm
+- apt-mark hold kde-config-sddm

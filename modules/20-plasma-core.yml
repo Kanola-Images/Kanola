@@ -2,7 +2,7 @@ name: plasma-core
 type: apt
 source:
   packages:
-  - sddm
+  - gdm3
   - libpam-systemd
   - xorg
   - xserver-xephyr
@@ -15,7 +15,6 @@ source:
   - plasma-thunderbolt
   - plasma-vault
   - plasma-workspace
-  - plasma-workspace-wayland
 
   - dbus-x11
 

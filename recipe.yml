@@ -38,6 +38,7 @@ stages:
   - name: packages-modules
     type: includes
     includes:
+      - modules/10-display-manager.yml
       - modules/20-plasma-core.yml
       - modules/30-plasma-essentials.yml
       - modules/161-plasma-utilities.yml
