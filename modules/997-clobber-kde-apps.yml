@@ -1,4 +1,4 @@
 name: clobber-kde
 type: shell
 commands:
-- sudo apt purge --autoremove -y plasma-discover
+- : # This file is being preserved for future needs, but currently does nothing.

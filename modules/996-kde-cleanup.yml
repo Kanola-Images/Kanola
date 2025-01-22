@@ -1,7 +1,5 @@
 name: vanilla-cleanup
 type: shell
 commands:
-- mv /usr/share/plasma/desktoptheme/default /usr/share/plasma/desktoptheme/breeze
-- mv /usr/share/plasma/desktoptheme/dracula /usr/share/plasma/desktoptheme/default
 # Fix kscreenlocker
 - chmod u+s /sbin/unix_chkpwd
