@@ -10,7 +10,7 @@ source:
   - kde-config-gtk-style
   - kde-config-screenlocker
   - kde-style-oxygen-qt5
-  - kgamma5
+  - kgamma
   - khelpcenter
   - kinfocenter
   - kio-extras
