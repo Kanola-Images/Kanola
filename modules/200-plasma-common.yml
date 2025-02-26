@@ -11,7 +11,7 @@ source:
   - kde-config-screenlocker
   - kde-config-sddm
   - kde-style-oxygen-qt5
-  - kgamma5
+  - kgamma
   - khelpcenter
   - khotkeys
   - kinfocenter
