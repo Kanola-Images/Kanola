@@ -3,3 +3,4 @@ type: shell
 commands:
 # Fix kscreenlocker
 - chmod u+s /sbin/unix_chkpwd
+- sudo apt remove -y --autoremove gnome-software

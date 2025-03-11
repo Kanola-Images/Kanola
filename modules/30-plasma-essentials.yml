@@ -6,3 +6,5 @@ source:
   - dolphin
   - dolphin-nextcloud
   - dolphin-plugins
+  - discover
+  - plasma-discover-backend-flatpak
