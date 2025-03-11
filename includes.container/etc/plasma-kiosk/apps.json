@@ -1,0 +1,156 @@
+{
+  "core": [
+    {
+      "name": "Audio Player",
+      "id": "org.kde.amarok"
+    },
+    {
+      "name": "Calculator",
+      "id": "org.kde.kcalc"
+    },
+    {
+      "name": "Calendar/Contacts",
+      "id": "org.kde.kontact"
+    },
+    {
+      "name": "Characters",
+      "id": "org.kde.kcharselect"
+    },
+    {
+      "name": "Clocks",
+      "id": "org.kde.kclock"
+    },
+    {
+      "name": "Disk Usage Analyzer",
+      "id": "org.kde.filelight"
+    },
+    {
+      "name": "Document Scanner",
+      "id": "org.kde.skanpage"
+    },
+    {
+      "name": "Document Viewer",
+      "id": "org.kde.okular"
+    },
+    {
+      "name": "Image Viewer",
+      "id": "org.kde.gwenview"
+    },
+    {
+      "name": "Maps",
+      "id": "org.kde.marble"
+    },
+    {
+      "name": "Photos",
+      "id": "org.kde.koko"
+    },
+    {
+      "name": "Snapshot",
+      "id": "org.flameshot.Flameshot"
+    },
+    {
+      "name": "Text Editor",
+      "id": "org.kde.kate"
+    },
+    {
+      "name": "Videos",
+      "id": "org.kde.haruna"
+    },
+    {
+      "name": "Weather",
+      "id": "org.kde.kweather"
+    }
+  ],
+  "office": [
+    {
+      "name": "LibreOffice",
+      "id": "org.libreoffice.LibreOffice"
+    }
+  ],
+  "utilities": [
+    {
+      "name": "Bottles",
+      "id": "com.usebottles.bottles"
+    },
+    {
+      "name": "Extension Manager",
+      "id": "com.mattjakeman.ExtensionManager"
+    },
+    {
+      "name": "Heroic Games Launcher",
+      "id": "com.heroicgameslauncher.hgl"
+    },
+    {
+      "name": "Lutris",
+      "id": "net.lutris.Lutris"
+    },
+    {
+      "name": "Boxes",
+      "id": "org.gnome.Boxes"
+    },
+    {
+      "name": "D\u00e9j\u00e0 Dup Backups",
+      "id": "org.gnome.DejaDup"
+    },
+    {
+      "name": "Flatseal",
+      "id": "com.github.tchx84.Flatseal"
+    },
+    {
+      "name": "Metadata Cleaner",
+      "id": "fr.romainvigier.MetadataCleaner"
+    },
+    {
+      "name": "Rnote",
+      "id": "com.github.flxzt.rnote"
+    },
+    {
+      "name": "Shortwave",
+      "id": "de.haeckerfelix.Shortwave"
+    },
+    {
+      "name": "Sound Recorder",
+      "id": "org.gnome.SoundRecorder"
+    },
+    {
+      "name": "Warehouse",
+      "id": "io.github.flattool.Warehouse"
+    }
+  ],
+  "browsers": [
+    {
+      "name": "Firefox",
+      "id": "org.mozilla.firefox"
+    },
+    {
+      "name": "Google Chrome",
+      "id": "com.google.Chrome",
+      "active": false
+    },
+    {
+      "name": "Chromium",
+      "id": "org.chromium.Chromium",
+      "active": false
+    },
+    {
+      "name": "Brave Browser",
+      "id": "com.brave.Browser",
+      "active": false
+    },
+    {
+      "name": "Microsoft Edge",
+      "id": "com.microsoft.Edge",
+      "active": false
+    },
+    {
+      "name": "Vivaldi",
+      "id": "com.vivaldi.Vivaldi",
+      "active": false
+    },
+    {
+      "name": "GNOME Web",
+      "id": "org.gnome.Epiphany",
+      "active": false
+    }
+  ]
+}
