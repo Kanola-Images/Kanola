@@ -1,0 +1,43 @@
+[KDE Action Restrictions][$i]
+action/run_command=false
+action/open_terminal=false
+action/options_configure_keyboard=false
+action/switch_user=false
+action/lock_screen=false
+action/logout=false
+
+[General]
+BrowserApplication=!w
+defaultLookAndFeel=org.kde.breeze.desktop
+allowLogout=false
+
+[KWin]
+allowedActions=override
+
+[Applications]
+AllowedApplications=firstsetup
+
+[Desktop Scripting]
+Enabled=false
+
+[Desktop Interaction]
+AllowedWidgets=none
+
+[Kiosk]
+LockedDown=true
+
+[KGlobalShortcuts]
+ActivityManager=none
+kwin=!Alt+F1,!Alt+F2,!Alt+Tab,!Meta+L,!Meta+E,!Alt+Space
+
+[Plasma Desktop]
+LayoutPackage=org.kde.plasma.desktop.firstsetup
+
+[Containments][0]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
