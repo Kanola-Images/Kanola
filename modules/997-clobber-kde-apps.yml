@@ -1,4 +1,8 @@
 name: clobber-kde
 type: shell
 commands:
-- sudo apt purge --autoremove -y plasma-discover
+- rm -f /usr/bin/__first_setup_reset_session
+- mv /usr/workarounds/__first_setup_reset_session /usr/bin/__first_setup_reset_session
+- chown root:root /usr/bin/__first_setup_reset_session
+- chmod 0755 /usr/bin/__first_setup_reset_session
+- rm -rf /usr/workarounds
