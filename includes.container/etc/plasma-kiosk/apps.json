@@ -65,6 +65,11 @@
     {
       "name": "LibreOffice",
       "id": "org.libreoffice.LibreOffice"
+    },
+    {
+      "name": "OnlyOffice",
+      "id": "org.onlyoffice.desktopeditors",
+      "active": false
     }
   ],
   "utilities": [
@@ -115,6 +120,10 @@
     {
       "name": "Warehouse",
       "id": "io.github.flattool.Warehouse"
+    },
+    {
+      "name": "Thunderbird",
+      "id": "org.mozilla.Thunderbird"
     }
   ],
   "browsers": [
@@ -135,6 +144,21 @@
     {
       "name": "Brave Browser",
       "id": "com.brave.Browser",
+      "active": false
+    },
+    {
+      "name": "Floorp",
+      "id": "one.ablaze.floorp",
+      "active": false
+    },
+    {
+      "name": "LibreWolf",
+      "id": "io.gitlab.librewolf-community",
+      "active": false
+    },
+    {
+      "name": "Zen",
+      "id": "app.zen_browser.zen",
       "active": false
     },
     {
