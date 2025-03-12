@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=FirstSetup Next Boot
-Comment=Run FirstSetup commands at the next boot
-Exec=sh -c vanilla-first-setup --run-post-script '/usr/bin/pkexec env REAL_USER=$USER /etc/org.vanillaos.FirstSetup.nextBoot'
-Terminal=false
-Type=Application
-X-GNOME-Autostart-enabled=true
