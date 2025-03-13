@@ -1,0 +1,14 @@
+#!/bin/bash
+if ! [ -z "$1" ]; then
+    echo "usage:"
+    echo "disable-lockscreen"
+    exit 5
+fi
+
+if [ "$UID" == "0" ]; then
+    echo "this script must be run as a regular user"
+    exit 7
+fi
+
+kwriteconfig6 --file kscreenlockerrc --group Daemon --key Autolock false
+qdbus6 org.freedesktop.ScreenSaver /ScreenSaver configure
