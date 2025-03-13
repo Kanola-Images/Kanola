@@ -11,7 +11,7 @@ source:
   - plasma-browser-integration
   - plasma-firewall
   - plasma-nm
-  - kmix
+  - plasma-pa
   - plasma-thunderbolt
   - plasma-vault
   - plasma-workspace
