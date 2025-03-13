@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=FirstSetup (x11)
+Comment=Restricted Plasma session for initial setup
+Exec=env KDE_KIOSK_MODE=1 KIOSK_CONFIG_FILE=/etc/plasma-kiosk/firstsetup-kioskrc /usr/bin/startplasma-x11 --replace --no-sandbox
+TryExec=/usr/bin/startplasma-x11
+Type=Application
+DesktopNames=KDE
+X-GDM-SessionRegisters=true
+NoDisplay=true

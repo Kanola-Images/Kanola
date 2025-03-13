@@ -1,0 +1,11 @@
+name: cleanup
+type: shell
+commands:
+# Fix kscreenlocker
+- chmod u+s /sbin/unix_chkpwd
+- sudo apt remove -y --autoremove gnome-software
+- chmod -R 644 /etc/plasma-kiosk
+- chmod -R 755 /usr/share/org.vanillaos.FirstSetup
+- mv /etc/plasma-kiosk/firstsetup-x.desktop /usr/share/xsessions/firstsetup.desktop
+- mv /etc/plasma-kiosk/firstsetup-w.desktop /usr/share/wayland-sessions/firstsetup.desktop
+- mv /etc/plasma-kiosk/apps.json /usr/share/org.vanillaos.FirstSetup/vanilla_first_setup/apps.json

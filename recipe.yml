@@ -43,8 +43,7 @@ stages:
       - modules/30-plasma-essentials.yml
       - modules/161-plasma-utilities.yml
       - modules/200-plasma-common.yml
-      - modules/996-kde-cleanup.yml
-      - modules/997-clobber-kde-apps.yml
+      - modules/999-cleanup.yml
 
   - name: cleanup
     type: shell
