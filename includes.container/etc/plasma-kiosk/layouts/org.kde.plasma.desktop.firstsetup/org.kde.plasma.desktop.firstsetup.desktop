@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=First Setup Layout
+Comment=Custom Plasma layout for kiosk mode initial setup session.
+Type=Service
+X-KDE-ServiceTypes=Plasma/Kiosk/Layout
+X-KDE-PluginInfo-Name=org.kde.plasma.desktop.firstsetup
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Category=Kiosk
+X-KDE-PluginInfo-Description=A layout package for the Plasma kiosk first setup session.

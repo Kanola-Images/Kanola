@@ -8,7 +8,6 @@ action/logout=false
 
 [General]
 BrowserApplication=!w
-defaultLookAndFeel=org.kde.breeze.desktop
 allowLogout=false
 
 [KWin]
