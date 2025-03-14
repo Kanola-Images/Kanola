@@ -5,7 +5,7 @@
   "registryService": "registry.ghcr.io",
   "registryAPIVersion": "v2",
   "name": "kanola-images/plasma",
-  "tag": "dev",
+  "tag": "main",
   "iPkgMngPre": "lpkg --unlock",
   "iPkgMngPost": "lpkg --lock",
   "iPkgMngAdd": "apt-get install -y",
