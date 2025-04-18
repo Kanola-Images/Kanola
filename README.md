@@ -9,12 +9,6 @@ Unofficial Vanilla OS Desktop Experience with Plasma.
 
 see [here](https://kanola.mmacneill.net/assets/kanola/install.html).
 
-## Switch your Installation to this image
-
-- Edit the `/etc/abroot/abroot.json` file with the `host-shell pkexec nano /etc/abroot/abroot.json` command.
-- Change the "name" entry from something like `vanilla-os/desktop` to `kanola-images/plasma` (**Note**: All characters must be in lowercase).
-- Now, Run `abroot upgrade` to switch to your custom image.
-
 ## Build
 
 ```bash
