@@ -1,26 +1,26 @@
 name: plasma-core
 type: apt
-source:
-  packages:
-  - gdm3
-  - libpam-systemd
-  - xorg
-  - xserver-xephyr
+sources:
+  - packages:
+    - gdm3
+    - libpam-systemd
+    - xorg
+    - xserver-xephyr
 
-  - plasma-desktop
-  - plasma-browser-integration
-  - plasma-firewall
-  - plasma-nm
-  - plasma-pa
-  - plasma-thunderbolt
-  - plasma-vault
-  - plasma-workspace
+    - plasma-desktop
+    - plasma-browser-integration
+    - plasma-firewall
+    - plasma-nm
+    - plasma-pa
+    - plasma-thunderbolt
+    - plasma-vault
+    - plasma-workspace
 
-  - dbus-x11
+    - dbus-x11
 
-  - kwin-x11
-  - kwin-wayland
+    - kwin-x11
+    - kwin-wayland
 
-  - xdg-desktop-portal
-  - xdg-desktop-portal-kde
-  - xdg-desktop-portal-gtk
+    - xdg-desktop-portal
+    - xdg-desktop-portal-kde
+    - xdg-desktop-portal-gtk
