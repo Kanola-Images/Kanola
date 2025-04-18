@@ -1,25 +1,25 @@
 name: plasma-common
 type: apt
-source:
-  packages:
-  - heif-thumbnailer
-  - webp-pixbuf-loader
-  - bluedevil
-  - breeze-gtk-theme
-  - ibus-data
-  - kde-config-gtk-style
-  - kde-config-screenlocker
-  - kde-style-oxygen-qt5
-  - kgamma
-  - khelpcenter
-  - kinfocenter
-  - kio-extras
-  - kmenuedit
-  - kscreen
-  - ksshaskpass
-  - kwin-x11
-  - kwrited
-  - libpam-kwallet5
-  - powerdevil
-  - systemsettings
-  - polkit-kde-agent-1
+sources:
+  - packages:
+    - heif-thumbnailer
+    - webp-pixbuf-loader
+    - bluedevil
+    - breeze-gtk-theme
+    - ibus-data
+    - kde-config-gtk-style
+    - kde-config-screenlocker
+    - kde-style-oxygen-qt5
+    - kgamma
+    - khelpcenter
+    - kinfocenter
+    - kio-extras
+    - kmenuedit
+    - kscreen
+    - ksshaskpass
+    - kwin-x11
+    - kwrited
+    - libpam-kwallet5
+    - powerdevil
+    - systemsettings
+    - polkit-kde-agent-1

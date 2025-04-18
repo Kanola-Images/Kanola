@@ -1,7 +1,7 @@
 name: plasma-utilities
 type: apt
-source:
-  packages:
-  - plasma-disks
-  - plasma-systemmonitor
-  - kwalletmanager
+sources:
+  - packages:
+    - plasma-disks
+    - plasma-systemmonitor
+    - kwalletmanager

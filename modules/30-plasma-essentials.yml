@@ -1,10 +1,10 @@
 name: plasma-essentials
 type: apt
-source:
-  packages:
-  - ark
-  - dolphin
-  - dolphin-nextcloud
-  - dolphin-plugins
-  - discover
-  - plasma-discover-backend-flatpak
+sources:
+  - packages:
+    - ark
+    - dolphin
+    - dolphin-nextcloud
+    - dolphin-plugins
+    - discover
+    - plasma-discover-backend-flatpak
