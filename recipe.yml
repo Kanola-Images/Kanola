@@ -1,11 +1,11 @@
 name: Kanola Plasma Desktop
 id: kanola-plasma
-vibversion: 1.0.1
+vibversion: 1.0.2
 
 stages:
 - id: build
   base: ghcr.io/kanola-images/base:main
-  singlelayer: false
+  addincludes: true
   labels:
     maintainer: Kanola Contributors
   args:
@@ -31,8 +31,8 @@ stages:
         url: https://github.com/Vanilla-OS/vanilla-tools/releases/download/continuous/vanilla-tools.tar.gz
     commands:
     - mkdir -p /usr/bin
-    - cp /sources/vanilla-tools/vanilla-tools/lpkg /usr/bin/lpkg
-    - cp /sources/vanilla-tools/vanilla-tools/cur-gpu /usr/bin/cur-gpu
+    - cp /sources/vanilla-tools/vanilla-tools/vanilla-tools/lpkg /usr/bin/lpkg
+    - cp /sources/vanilla-tools/vanilla-tools/vanilla-tools/cur-gpu /usr/bin/cur-gpu
     - chmod +x /usr/bin/lpkg
     - chmod +x /usr/bin/cur-gpu
 
