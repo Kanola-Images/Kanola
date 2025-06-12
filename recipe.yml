@@ -46,6 +46,12 @@ stages:
       - modules/200-plasma-common.yml
       - modules/999-cleanup.yml
 
+  - name: fix-gdm-permissions-service
+    type: shell
+    commands:
+    - mkdir -p /etc/systemd/system/multi-user.target.wants/
+    - ln -s /usr/lib/systemd/system/fix-gdm-permissions.service /etc/systemd/system/multi-user.target.wants/
+
   - name: cleanup
     type: shell
     commands:

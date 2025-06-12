@@ -1,0 +1,11 @@
+[Unit]
+Description=Change folder ownership before GDM starts
+Before=gdm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/chown -R Debian-gdm:Debian-gdm /var/lib/gdm3
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
