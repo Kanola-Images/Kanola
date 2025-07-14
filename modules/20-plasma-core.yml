@@ -15,11 +15,13 @@ sources:
     - plasma-thunderbolt
     - plasma-vault
     - plasma-workspace
+    - plasma-runners-addons
 
     - dbus-x11
 
     - kwin-x11
     - kwin-wayland
+    - kwin-addons
 
     - xdg-desktop-portal
     - xdg-desktop-portal-kde
